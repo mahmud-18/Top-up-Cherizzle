@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cherizzle Top-Up Games</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="tambahan-foto">
+          <img src="img/a.png" alt="" />
+        </div>
+
+        <div class="logo">
+          <img src="img/logo.png" alt="" class="logo-img" />
+        </div>
+
+        <div class="navbar-nav" id="navbar-nav">
+          <a href="/">
+            Home
+            <img
+              src="img/1.png"
+              alt="pastel"
+              style="width: 30px; height: 30px"
+              class="pastel-img"
+            />
+          </a>
+
+          <a href="#cek-pesanan">
+            Cek Pesanan
+            <img
+              src="img/5.png"
+              alt="pastel"
+              style="width: 30px; height: 30px"
+              class="pastel-img"
+            />
+          </a>
+
+          <a href="#daftar-harga">
+            Daftar Harga
+            <img
+              src="img/4.png"
+              alt="pastel"
+              style="width: 30px; height: 30px"
+              class="pastel-img"
+            />
+          </a>
+
+          <a href="#top10">
+            Top 10
+            <img
+              src="img/6.png"
+              alt="pastel"
+              style="width: 30px; height: 30px"
+              class="pastel-img"
+            />
+          </a>
+
+          <div class="dropdown jadwal">
+            <a href="#" class="btn-jadwal" onclick="toggleDropdown()">
+              Jadwal
+              <img
+                src="img/7.png"
+                alt="pastel"
+                style="width: 30px; height: 30px"
+              />
+            </a>
+            <div class="dropdown-jadwal">
+              <a href="#">Jadwal Gift</a>
+              <a href="#">Jadwal Starlight</a>
+              <a href="#">Jadwal Room Tour 1</a>
+              <a href="#">Jadwal Room Tour 2</a>
+              <a href="#">Jadwal Room Tour 3</a>
+              <a href="#">Jadwal Room Tour 4</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#" class="dropbtn" onclick="myFunction()"
+            >Login
+            <img
+              src="https://img.icons8.com/nolan/10/sort-down--v1.png"
+              alt="sort-down--v1"
+              class="down-arrow"
+            />
+          </a>
+          <div id="myDropdownLogin" class="dropdown-content">
+            <a href="#" class="drop-text">Masuk</a>
+            <a href="#" class="drop-text">Daftar</a>
+          </div>
+        </div>
+
+        <div class="navbar-extra">
+          <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- landing Page -->
+    <main class="landing" id="landing">
+      <div class="blooms-sakura"></div>
+
+      <div class="banner"></div>
+
+      <div class="search-menu">
+        <div class="search">
+          <input type="text" name="query" placeholder="Search products..." />
+          <img
+            src="https://img.icons8.com/nolan/64/search.png"
+            alt="search"
+            class="search-icon"
+          />
+        </div>
+      </div>
+
+      <div class="lingkaran-kontainer" id="topup-btn">
+        <div class="lingkaran-konten">
+          <div class="lingkaran-menu">
+            <img src="https://img.icons8.com/nolan/64/star.png" alt="star" />
+            <h1>Top Up</h1>
+          </div>
+        </div>
+
+        <div class="lingkaran-konten" id="sosmed-btn">
+          <div class="lingkaran-menu sosmed">
+            <img src="https://img.icons8.com/nolan/64/star.png" alt="star" />
+            <h2>Sosmed</h2>
+          </div>
+        </div>
+
+        <div class="lingkaran-konten" id="apk-btn">
+          <div class="lingkaran-menu apk">
+            <img src="https://img.icons8.com/nolan/64/star.png" alt="star" />
+            <h2>Apk Premium</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="unicorn-divider">🦄🦄🦄</div>
+    </main>
+
+    <!-- Landing Page End -->
+
+    <!-- Kategori Menu -->
+
+    <main class="menu" id="menu">
+      <h1 class="menu-title">Menu</h1>
+
+      <div class="kategori" id="menu-container">
+        <div class="kategori-circle">
+          <div class="circle-menu">
+            <img src="img/change.png" alt="Change" />
+          </div>
+          <p class="text-kategori">Mobile Legends</p>
+        </div>
+
+        <div class="kategori-circle">
+          <div class="circle-menu">
+            <img src="img/ff.png" alt="Free Fire" />
+          </div>
+          <p class="text-kategori">Free Fire</p>
+        </div>
+
+        <div class="kategori-circle">
+          <div class="circle-menu valorant">
+            <img src="img/Valorant.png" alt="Valorant " />
+          </div>
+          <p class="text-kategori">Valorant</p>
+        </div>
+
+        <div class="kategori-circle">
+          <div class="circle-menu">
+            <img src="img/genshin.png" alt="Genshin Impact" />
+          </div>
+          <p class="text-kategori">Genshin Impact</p>
+        </div>
+
+        <div class="kategori-circle">
+          <div class="circle-menu">
+            <img src="img/pubg.png" alt="Pubg Mobile" />
+          </div>
+          <p class="text-kategori">Pubg Mobile</p>
+        </div>
+
+        <div class="kategori-circle">
+          <div class="circle-menu">
+            <img src="img/hok.png" alt="Loong HOK" />
+          </div>
+          <p class="text-kategori">Honor Of Kings</p>
+        </div>
+
+        <div class="kategori-circle">
+          <div class="circle-menu deepSpace">
+            <img src="img/deepspace.png" alt="Love n deepspace" />
+          </div>
+          <p class="text-kategori-panjang">
+            Love <br />
+            Deepspace
+          </p>
+        </div>
+        <div class="kategori-circle">
+          <div class="circle-menu coc">
+            <img src="img/coc.png" alt="Clash Of Clans" />
+          </div>
+          <p class="text-kategori">Clash Of Clans</p>
+        </div>
+
+        <div class="kategori-circle">
+          <div class="circle-menu">
+            <img src="img/honkai.png" alt="Honkai Impact" />
+          </div>
+          <p class="text-kategori">Honkai Star Rail</p>
+        </div>
+        <div class="kategori-circle">
+          <div class="circle-menu cod">
+            <img src="img/cod.png" alt="Call Of Duty" />
+          </div>
+          <p class="text-kategori">Call Of Duty</p>
+        </div>
+
+        <div class="kategori-circle">
+          <div class="circle-menu roblox">
+            <img src="img/roblox.png" alt="Roblox" />
+          </div>
+          <p class="text-kategori">Roblox</p>
+        </div>
+
+        <div class="kategori-circle">
+          <div class="circle-menu cod">
+            <img src="img/sky.png" alt="Sky" />
+          </div>
+          <p class="text-kategori">Sky</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Kategori Menu End -->
+
+    <!-- about store -->
+
+    <section class="about">
+      <div class="about-head">
+        <img src="img/logo.png" alt="Logo" />
+        <h1>Website top-up terbesar dan terpercaya di Indonesia</h1>
+        <p>
+          Setiap bulannya, jutaan gamers menggunakan moneyinv untuk melakukan
+          pembelian kredit game dengan lancar: tanpa registrasi ataupun log-in,
+          dan kredit permainan akan ditambahkan secara instan. Top-up Mobile
+          Legends, Free Fire, Ragnarok M, dan berbagai game lainnya!
+        </p>
+
+        <div class="card-about">
+          <div class="card-content">
+            <div class="card-inside">
+              <h1>Bayar dalam hitungan detik</h1>
+              <p>
+                Hanya dibutuhkan beberapa detik saja untuk menyelesaikan
+                pembayaran di CHERRIZLE karena situs kami berfungsi dengan baik
+                dan mudah untuk digunakan.
+              </p>
+              <img
+                src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-clock-achievements-flaticons-lineal-color-flat-icons.png"
+                alt="external-clock-achievements-flaticons-lineal-color-flat-icons"
+              />
+            </div>
+          </div>
+
+          <div class="card-content">
+            <div class="card-inside">
+              <h1>Metode pembayaran terbaik</h1>
+              <p>
+                Kami menawarkan begitu banyak pilihan pembayaran mulai dari
+                potong pulsa, e-wallet, bank transfer, dan pembayaran di mini
+                market terdekat.
+              </p>
+              <img
+                src="https://img.icons8.com/cotton/64/wallet--v1.png"
+                alt="wallet--v1"
+              />
+            </div>
+          </div>
+
+          <div class="card-content">
+            <div class="card-inside">
+              <h1>Promosi-promosi menarik</h1>
+              <p>
+                Penggemar game dapat bergantung pada CHERRIZLE karena kami
+                memberikan penawaran menarik, diskon dan kode item dari promosi
+                game yang disukai kamu.
+              </p>
+              <img class="tag" src="img/icons/tag.png" alt="tags" />
+            </div>
+          </div>
+
+          <div class="card-content">
+            <div class="card-inside">
+              <h1>Pengiriman instan</h1>
+              <p>
+                Ketika kamu melakukan top-up di CHERRIZLE, item atau barang yang
+                kamu beli akan selalu dikirim ke akun kamu secara instan dan
+                cepat, tanpa tertunda.
+              </p>
+              <img class="diamond" src="img/icons/diamond.png" alt="diamond" />
+            </div>
+          </div>
+
+          <div class="card-content">
+            <div class="card-inside">
+              <h1>Pelayanan Pelanggan</h1>
+              <p>
+                Tim support siap membantu Anda dari pukul 9 pagi hingga 12 pagi,
+                7 hari seminggu. Kirimkan Support Request Form dan kami akan
+                segera menghubungi Anda!
+              </p>
+
+              <img
+                src="https://img.icons8.com/officel/80/gender-neutral-user.png"
+                alt="gender-neutral-user"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about store end -->
+
+    <footer>
+      <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a
+          href="https://api.whatsapp.com/send?phone=6289617498917&text=Halo,%20Saya%20ingin%20order"
+          ><i data-feather="message-circle"></i
+        ></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
+
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#cek-pesanan">Cek Pesanan</a>
+        <a href="#top-10">Top 10</a>
+        <a href="#daftar-harga">Daftar Harga</a>
+      </div>
+
+      <div class="credit">
+        <p>Created By <a href="">Mud Arab</a>| &copy; 2024.</p>
+      </div>
+    </footer>
+
+    <!-- Feather Icon -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- Feather Icons -->
+
+    <!-- Js -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
