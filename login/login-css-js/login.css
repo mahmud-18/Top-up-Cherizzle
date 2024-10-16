@@ -1,0 +1,266 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-fluid {
+  background-image: url("../assets/bg-login.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.rectangle {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  width: 490px;
+  padding: 20px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.welcome h1 {
+  font-family: "Blanka", sans-serif;
+  font-size: 3em;
+  text-shadow: 0 4px 5px rgba(54, 51, 51, 0.69);
+  color: #5271ff;
+}
+
+.rectangle-signup {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  width: 230px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  cursor: pointer;
+  position: relative;
+}
+
+.rectangle-signup span {
+  font-size: 0.9em;
+  color: #b8b8b8;
+}
+
+.google-icon {
+  width: 26px;
+  height: 24px;
+  margin-right: 0.5rem;
+}
+
+.border-right {
+  border-right: 1px solid #ccc;
+  height: 24px;
+  margin: 0 0.5rem;
+}
+
+.login-container {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: #ffffff;
+  margin: 0 10px;
+}
+
+.login-text {
+  font-family: "Ample", sans-serif;
+  font-size: 1.7em;
+  padding: 0 10px;
+  text-shadow: 0 3px 3px rgba(54, 51, 51, 0.523);
+  color: #5271ff;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+.input-container {
+  position: relative;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 40px 10px 30px;
+  border: none;
+  border-radius: 25px;
+}
+
+.input-icon {
+  position: absolute;
+  right: 20px;
+  top: 54%;
+  transform: translateY(-50%);
+  color: #23008c;
+}
+
+.login-options {
+  margin: 0 auto 0 25%;
+  font-size: 0.9em;
+  gap: 1rem;
+}
+
+.login-options input {
+  line-height: 30px;
+  margin-right: 1rem;
+}
+
+.forgot-password a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.btn {
+  width: 180px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+}
+
+.btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #081b7c;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.btn::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.btn:active:after {
+  background: transparent;
+}
+
+.btn:hover {
+  background-color: #150483ab;
+  color: #ccc;
+}
+.btn:active {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.girls-image {
+  position: absolute;
+  left: 25rem;
+  bottom: -1rem;
+  width: 120px;
+  z-index: 1;
+}
+
+.daftar {
+  position: relative;
+  z-index: 2;
+  font-size: 0.9em;
+}
+
+.sakura-image {
+  position: absolute;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+@media (max-width: 576px) {
+  .rectangle {
+    width: 90%; /* Rectangle menjadi lebih kecil di layar mobile */
+    padding: 15px;
+  }
+
+  .rectangle-signup {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .input-container {
+    width: 90%;
+  }
+
+  .login-options {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .textLogin {
+    margin-left: 1.5rem;
+    gap: 1rem;
+  }
+
+  .girls-image {
+    bottom: -1rem;
+    left: 15.5rem;
+    width: 90px;
+  }
+
+  .sakura-image {
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 576px) {
+  .sakura-image {
+    width: 250px;
+    top: 25%;
+  }
+}

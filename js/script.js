@@ -10,26 +10,22 @@ document
     }
   });
 
-// dropdown list
-function myFunction() {
-  let dropdown = document.getElementById("myDropdownLogin"); // Sesuaikan ID
-  if (dropdown.style.display === "block") {
-    dropdown.style.display = "none";
+// Dropdown Login
+function myFunction(event) {
+  event.stopPropagation(); // Mencegah window onclick dari menutup dropdown segera
+  let dropdownLogin = document.getElementById("myDropdownLogin");
+
+  // Toggling dropdown login
+  if (dropdownLogin.style.display === "block") {
+    dropdownLogin.style.display = "none";
   } else {
-    dropdown.style.display = "block";
+    dropdownLogin.style.display = "block";
   }
 }
 
-window.onclick = function (event) {
-  if (!event.target.matches(".dropbtn")) {
-    let dropdown = document.getElementById("myDropdownLogin");
-    if (dropdown.style.display === "block") {
-      dropdown.style.display = "none";
-    }
-  }
-};
-
-function toggleDropdown() {
+// Dropdown Jadwal
+function toggleDropdown(event) {
+  event.stopPropagation(); // Mencegah window onclick dari menutup dropdown segera
   let dropdownJadwal = document.querySelector(".jadwal .dropdown-jadwal");
 
   if (dropdownJadwal.style.display === "block") {
@@ -39,14 +35,28 @@ function toggleDropdown() {
   }
 }
 
+// Event Handler untuk klik di luar dropdown
 window.onclick = function (event) {
-  if (!event.target.matches(".btn-jadwal")) {
-    let dropdowns = document.querySelectorAll(".jadwal .dropdown-jadwal");
-    dropdowns.forEach(function (dropdownJadwal) {
-      if (dropdownJadwal.style.display === "block") {
-        dropdown.style.display = "none";
-      }
-    });
+  // Untuk dropdown login
+  if (
+    !event.target.matches(".dropbtn") &&
+    !event.target.closest(".dropdown-content")
+  ) {
+    let dropdownLogin = document.getElementById("myDropdownLogin");
+    if (dropdownLogin && dropdownLogin.style.display === "block") {
+      dropdownLogin.style.display = "none";
+    }
+  }
+
+  // Untuk dropdown jadwal
+  if (
+    !event.target.matches(".btn-jadwal") &&
+    !event.target.closest(".dropdown-jadwal")
+  ) {
+    let dropdownJadwal = document.querySelector(".jadwal .dropdown-jadwal");
+    if (dropdownJadwal && dropdownJadwal.style.display === "block") {
+      dropdownJadwal.style.display = "none";
+    }
   }
 };
 
@@ -54,17 +64,24 @@ window.onclick = function (event) {
 const topupBtn = document.getElementById("topup-btn");
 const sosmedBtn = document.getElementById("sosmed-btn");
 const apkBtn = document.getElementById("apk-btn");
+const jokiBtn = document.getElementById("joki-btn");
 const menuContainer = document.getElementById("menu-container");
 
 const sosmedMenu = [
-  { img: "img/webtoon.png", text: "Webtoon" },
-  { img: "img/youtube.png", text: "Youtube" },
+  { img: "img/webtoon.png", text: "Webtoon", url: "topup/webtoon.html" },
+  { img: "img/youtube.png", text: "Youtube", url: "topup/youtube.html" },
 ];
 
 const apkPremiumMenu = [
-  { img: "img/netflix.png", text: "Netflix" },
-  { img: "img/spotify.png", text: "Spotify" },
-  { img: "img/canva.png", text: "Canva" },
+  { img: "img/netflix.png", text: "Netflix", url: "topup/netflix.html" },
+  { img: "img/spotify.png", text: "Spotify", url: "topup/spotify.html" },
+  { img: "img/canva.png", text: "Canva", url: "topup/canva.html" },
+];
+
+const jokiMenu = [
+  { img: "img/change.png", text: "Mobile Legends", url: "topup/netflix.html" },
+  { img: "img/ff.png", text: "Free Fire", url: "topup/ff.html" },
+  { img: "img/genshin.png", text: "Genshin", url: "topup/genshin.html" },
 ];
 
 const defaultMenuHTML = menuContainer.innerHTML;
@@ -86,8 +103,12 @@ function changeMenu(menuData) {
     textKategori.classList.add("text-kategori");
     textKategori.innerText = item.text;
 
-    img.style.display = "block";
-    img.style.margin = "10px 10px";
+    // img.style.margin = "6px";
+
+    // Tambahkan event listener pada gambar
+    img.addEventListener("click", () => {
+      window.location.href = item.url; // Arahkan ke URL yang sesuai
+    });
 
     circleMenu.appendChild(img);
     kategoriCircle.appendChild(circleMenu);
@@ -106,6 +127,12 @@ apkBtn.addEventListener("click", (event) => {
   event.stopPropagation();
   console.log("APK button clicked");
   changeMenu(apkPremiumMenu);
+});
+
+jokiBtn.addEventListener("click", (event) => {
+  event.stopPropagation();
+  console.log("Joki button clicked");
+  changeMenu(jokiMenu);
 });
 
 topupBtn.addEventListener("click", (event) => {

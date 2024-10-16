@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar</title>
+    <link rel="icon" href="../img/logo.png" sizes="32x32" type="image/png" />
+
+    <!-- Link font -->
+    <link href="https://fonts.cdnfonts.com/css/blanka" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/ample" rel="stylesheet" />
+
+    <!-- Login CSS -->
+    <link rel="stylesheet" href="login-css-js/daftar.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="bg-image">
+        <img src="assets/bg-login.png" alt="background" />
+      </div>
+
+      <div class="fly-bird">
+        <img src="assets/bird.png" alt="bird" />
+      </div>
+
+      <div class="wrapper">
+        <div class="login-box register">
+          <div class="welcome-text">
+            <h1>Registration</h1>
+          </div>
+
+          <form action="login.html" method="get">
+            <div class="form-box">
+              <span class="icon">
+                <ion-icon name="person"></ion-icon>
+              </span>
+              <input
+                type="text"
+                placeholder="Username"
+                class="input-field"
+                name="username"
+              />
+            </div>
+
+            <div class="form-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input
+                type="email"
+                placeholder="Your Email"
+                class="input-field"
+                name="email"
+              />
+            </div>
+
+            <div class="form-box">
+              <span class="icon"><ion-icon name="lock"></ion-icon></span>
+              <input
+                type="password"
+                placeholder="Password"
+                class="input-field"
+                name="password"
+              />
+            </div>
+
+            <div class="login-options">
+              <label>
+                <input type="checkbox" /> I agree to the terms & conditions
+              </label>
+            </div>
+
+            <div class="form-buttons">
+              <button type="submit" class="submit-btn" id="daftarBtn">
+                Daftar
+              </button>
+            </div>
+
+            <div class="signup-link">
+              <p>
+                Sudah memiliki akun?
+                <a href="login.html" class="login-link">Login</a>
+              </p>
+            </div>
+          </form>
+
+          <div class="img-element">
+            <img src="assets/girls.png" alt="girls" class="girl" />
+            <img src="assets/sakura.gif" alt="sakura" class="sakura" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

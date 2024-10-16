@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="top-user.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +14,7 @@
 
     <title>Cherizzle Top-Up Games</title>
 
-    <link rel="icon" href="img/logo.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="../../img/logo.png" sizes="32x32" type="image/png" />
   </head>
   <body>
     <header>
@@ -24,44 +24,44 @@
         </div>
 
         <div class="logo">
-          <img src="img/logo.png" alt="" class="logo-img" />
+          <img src="../../img/logo.png" alt="" class="logo-img" />
         </div>
 
         <div class="navbar-nav" id="navbar-nav">
           <a href="/">
             Home
             <img
-              src="img/1.png"
+              src="../../img/1.png"
               alt="pastel"
               style="width: 30px; height: 30px"
               class="pastel-img"
             />
           </a>
 
-          <a href="navbar-item/cek pesanan/riwayat-pembelian.html">
+          <a href="../../navbar-item/cek pesanan/riwayat-pembelian.html">
             Cek Pesanan
             <img
-              src="img/5.png"
+              src="../../img/5.png"
               alt="pastel"
               style="width: 30px; height: 30px"
               class="pastel-img"
             />
           </a>
 
-          <a href="navbar-item/daftar harga/daftar-harga.html">
+          <a href="../../navbar-item/daftar harga/daftar-harga.html">
             Daftar Harga
             <img
-              src="img/4.png"
+              src="../../img/4.png"
               alt="pastel"
               style="width: 30px; height: 30px"
               class="pastel-img"
             />
           </a>
 
-          <a href="navbar-item/top 10/top-user.html">
+          <a href="#">
             Top 10
             <img
-              src="img/6.png"
+              src="../../img/6.png"
               alt="pastel"
               style="width: 30px; height: 30px"
               class="pastel-img"
@@ -72,27 +72,29 @@
             <a href="#" class="btn-jadwal" onclick="toggleDropdown(event)">
               Jadwal
               <img
-                src="img/7.png"
+                src="../../img/7.png"
                 alt="pastel"
                 style="width: 30px; height: 30px"
               />
             </a>
 
             <div class="dropdown-jadwal">
-              <a href="navbar-item/jadwal/jadwal-gift.html">Jadwal Gift</a>
-              <a href="navbar-item/jadwal/jadwal-starlight.html"
+              <a href="../../navbar-item/jadwal/jadwal-gift.html"
+                >Jadwal Gift</a
+              >
+              <a href="../../navbar-item/jadwal/jadwal-starlight.html"
                 >Jadwal Starlight</a
               >
-              <a href="navbar-item/jadwal/jadwal-room-tour.html"
+              <a href="../../navbar-item/jadwal/jadwal-room-tour.html"
                 >Jadwal Room Tour 1</a
               >
-              <a href="navbar-item/jadwal/jadwal-room-tour-2.html"
+              <a href="../../navbar-item/jadwal/jadwal-room-tour-2.html"
                 >Jadwal Room Tour 2</a
               >
-              <a href="navbar-item/jadwal/jadwal-room-tour-3.html"
+              <a href="../../navbar-item/jadwal/jadwal-room-tour-3.html"
                 >Jadwal Room Tour 3</a
               >
-              <a href="navbar-item/jadwal/jadwal-room-tour-4.html"
+              <a href="../../navbar-item/jadwal/jadwal-room-tour-4.html"
                 >Jadwal Room Tour 4</a
               >
             </div>
@@ -110,8 +112,8 @@
             />
           </a>
           <div id="myDropdownLogin" class="dropdown-content">
-            <a href="login/login.html" class="drop-text">Masuk</a>
-            <a href="login/daftar.html" class="drop-text">Daftar</a>
+            <a href="../../login/login.html" class="drop-text">Masuk</a>
+            <a href="../../login/daftar.html" class="drop-text">Daftar</a>
           </div>
         </div>
 
@@ -121,162 +123,64 @@
       </nav>
     </header>
 
-    <!-- landing Page -->
-    <main class="landing" id="landing">
-      <div class="blooms-sakura"></div>
+    <!-- top user -->
+    <section class="top-user">
+      <div class="container">
+        <h2 class="text-content">Hall of Fame</h2>
 
-      <div class="banner"></div>
+        <!-- Table for Top 10 Users with Most Orders -->
+        <div class="table-section">
+          <h3 class="text-table">Top 10 Pengguna dengan Order Terbanyak</h3>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Username</th>
+                <th>Total Pemesanan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>sample service 1</td>
+                <td>120</td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
 
-      <div class="search-menu">
-        <div class="search">
-          <input type="text" name="query" placeholder="Search products..." />
-          <img
-            src="https://img.icons8.com/nolan/64/search.png"
-            alt="search"
-            class="search-icon"
-          />
+        <!-- Table for Top 10 Services with Most Purchases -->
+        <div class="table-section">
+          <h3 class="text-table">Top 10 Layanan dengan Pembelian Terbanyak</h3>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Layanan/Produk</th>
+                <th>Total Pembelian</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Sample Service 1</td>
+                <td>500</td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
         </div>
       </div>
+    </section>
 
-      <div class="lingkaran-kontainer" id="topup-btn">
-        <div class="lingkaran-konten">
-          <div class="lingkaran-menu">
-            <img src="https://img.icons8.com/nolan/64/star.png" alt="star" />
-            <h1>Top Up</h1>
-          </div>
-        </div>
-
-        <div class="lingkaran-konten" id="sosmed-btn">
-          <div class="lingkaran-menu sosmed">
-            <img src="https://img.icons8.com/nolan/64/star.png" alt="star" />
-            <h2>Sosmed</h2>
-          </div>
-        </div>
-
-        <div class="lingkaran-konten" id="apk-btn">
-          <div class="lingkaran-menu apk">
-            <img src="https://img.icons8.com/nolan/64/star.png" alt="star" />
-            <h2>Apk Premium</h2>
-          </div>
-        </div>
-
-        <div class="lingkaran-konten" id="joki-btn">
-          <div class="lingkaran-menu joki">
-            <img src="https://img.icons8.com/nolan/64/star.png" alt="star" />
-            <h2>Joki</h2>
-          </div>
-        </div>
-      </div>
-
-      <div class="unicorn-divider">🦄🦄🦄</div>
-    </main>
-
-    <!-- Landing Page End -->
-
-    <!-- Kategori Menu -->
-
-    <main class="menu" id="menu">
-      <h1 class="menu-title">Menu</h1>
-
-      <div class="kategori" id="menu-container">
-        <div class="kategori-circle">
-          <div class="circle-menu">
-            <a href="topup/mobile-legends.html">
-              <img src="img/change.png" alt="Change"
-            /></a>
-          </div>
-          <p class="text-kategori">Mobile Legends</p>
-        </div>
-
-        <div class="kategori-circle">
-          <div class="circle-menu">
-            <a href=""> <img src="img/ff.png" alt="Free Fire" /></a>
-          </div>
-          <p class="text-kategori">Free Fire</p>
-        </div>
-
-        <div class="kategori-circle">
-          <div class="circle-menu valorant">
-            <a href=""><img src="img/Valorant.png" alt="Valorant " /></a>
-          </div>
-          <p class="text-kategori">Valorant</p>
-        </div>
-
-        <div class="kategori-circle">
-          <div class="circle-menu">
-            <a href=""><img src="img/genshin.png" alt="Genshin Impact" /></a>
-          </div>
-          <p class="text-kategori">Genshin Impact</p>
-        </div>
-
-        <div class="kategori-circle">
-          <div class="circle-menu">
-            <a href=""><img src="img/pubg.png" alt="Pubg Mobile" /></a>
-          </div>
-          <p class="text-kategori">Pubg Mobile</p>
-        </div>
-
-        <div class="kategori-circle">
-          <div class="circle-menu">
-            <a href=""><img src="img/hok.png" alt="Loong HOK" /> </a>
-          </div>
-          <p class="text-kategori">Honor Of Kings</p>
-        </div>
-
-        <div class="kategori-circle">
-          <div class="circle-menu deepSpace">
-            <a href=""
-              ><img src="img/deepspace.png" alt="Love n deepspace"
-            /></a>
-          </div>
-          <p class="text-kategori-panjang">
-            Love <br />
-            Deepspace
-          </p>
-        </div>
-        <div class="kategori-circle">
-          <div class="circle-menu coc">
-            <a href=""><img src="img/coc.png" alt="Clash Of Clans" /></a>
-          </div>
-          <p class="text-kategori">Clash Of Clans</p>
-        </div>
-
-        <div class="kategori-circle">
-          <div class="circle-menu">
-            <a href=""><img src="img/honkai.png" alt="Honkai Impact" /></a>
-          </div>
-          <p class="text-kategori">Honkai SR</p>
-        </div>
-        <div class="kategori-circle">
-          <div class="circle-menu cod">
-            <a href=""><img src="img/cod.png" alt="Call Of Duty" /></a>
-          </div>
-          <p class="text-kategori">Call Of Duty</p>
-        </div>
-
-        <div class="kategori-circle">
-          <div class="circle-menu roblox">
-            <a href=""><img src="img/roblox.png" alt="Roblox" /></a>
-          </div>
-          <p class="text-kategori">Roblox</p>
-        </div>
-
-        <div class="kategori-circle">
-          <div class="circle-menu cod">
-            <a href=""><img src="img/sky.png" alt="Sky" /></a>
-          </div>
-          <p class="text-kategori">Sky</p>
-        </div>
-      </div>
-    </main>
-
-    <!-- Kategori Menu End -->
+    <!-- top user end -->
 
     <!-- about store -->
 
     <section class="about">
       <div class="about-head">
-        <img src="img/logo.png" alt="Logo" />
+        <img src="../../img/logo.png" alt="Logo" />
         <h1>Website top-up terbesar dan terpercaya di Indonesia</h1>
         <p>
           Setiap bulannya, jutaan gamers menggunakan moneyinv untuk melakukan
@@ -324,7 +228,7 @@
 
           <div class="card-content">
             <div class="card-inside">
-              <img class="tag" src="img/icons/tag.png" alt="tags" />
+              <img class="tag" src="../../img/icons/tag.png" alt="tags" />
 
               <div class="text-content tag">
                 <h1>Promosi - Promosi Menarik</h1>
@@ -339,7 +243,11 @@
 
           <div class="card-content">
             <div class="card-inside">
-              <img class="diamond" src="img/icons/diamond.png" alt="diamond" />
+              <img
+                class="diamond"
+                src="../../img/icons/diamond.png"
+                alt="diamond"
+              />
 
               <div class="text-content sending">
                 <h1>Pengiriman instan</h1>
@@ -404,6 +312,6 @@
     <!-- Feather Icons -->
 
     <!-- Js -->
-    <script src="js/script.js"></script>
+    <script src="../../js/script.js"></script>
   </body>
 </html>
