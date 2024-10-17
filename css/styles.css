@@ -752,3 +752,11 @@ footer .credit a {
     padding: 0.6rem 0.4rem;
   }
 }
+
+@media (max-width: 480px) {
+  .btn-jadwal {
+    margin-right: 3.8rem;
+  }
+}
+
+
