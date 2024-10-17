@@ -16,16 +16,22 @@ function myFunction(event) {
   let dropdownLogin = document.getElementById("myDropdownLogin");
 
   // Toggling dropdown login
-  if (dropdownLogin.style.display === "block") {
-    dropdownLogin.style.display = "none";
+  if (dropdownLogin.classList.contains("show")) {
+    dropdownLogin.classList.remove("show");
+    setTimeout(() => {
+      dropdownLogin.style.display = "none"; // Sembunyikan setelah transisi selesai
+    }, 500); // Waktu delay sesuai dengan durasi transisi
   } else {
-    dropdownLogin.style.display = "block";
+    dropdownLogin.style.display = "block"; // Tampilkan dropdown
+    setTimeout(() => {
+      dropdownLogin.classList.add("show");
+    }, 10); // Delay kecil untuk memastikan transisi berfungsi
   }
 }
 
 // Dropdown Jadwal
 function toggleDropdown(event) {
-  event.stopPropagation(); // Mencegah window onclick dari menutup dropdown segera
+  event.stopPropagation();
   let dropdownJadwal = document.querySelector(".jadwal .dropdown-jadwal");
 
   if (dropdownJadwal.style.display === "block") {
@@ -43,8 +49,11 @@ window.onclick = function (event) {
     !event.target.closest(".dropdown-content")
   ) {
     let dropdownLogin = document.getElementById("myDropdownLogin");
-    if (dropdownLogin && dropdownLogin.style.display === "block") {
-      dropdownLogin.style.display = "none";
+    if (dropdownLogin && dropdownLogin.classList.contains("show")) {
+      dropdownLogin.classList.remove("show");
+      setTimeout(() => {
+        dropdownLogin.style.display = "none"; // Sembunyikan setelah transisi selesai
+      }, 500);
     }
   }
 
@@ -68,20 +77,60 @@ const jokiBtn = document.getElementById("joki-btn");
 const menuContainer = document.getElementById("menu-container");
 
 const sosmedMenu = [
-  { img: "img/webtoon.png", text: "Webtoon", url: "topup/webtoon.html" },
-  { img: "img/youtube.png", text: "Youtube", url: "topup/youtube.html" },
+  {
+    category: "sosmed",
+    img: "img/webtoon.png",
+    text: "Webtoon",
+    url: "topup/webtoon.html",
+  },
+  {
+    category: "sosmed",
+    img: "img/youtube.png",
+    text: "Youtube",
+    url: "topup/youtube.html",
+  },
 ];
 
 const apkPremiumMenu = [
-  { img: "img/netflix.png", text: "Netflix", url: "topup/netflix.html" },
-  { img: "img/spotify.png", text: "Spotify", url: "topup/spotify.html" },
-  { img: "img/canva.png", text: "Canva", url: "topup/canva.html" },
+  {
+    category: "apk",
+    img: "img/netflix.png",
+    text: "Netflix",
+    url: "topup/netflix.html",
+  },
+  {
+    category: "apk",
+    img: "img/spotify.png",
+    text: "Spotify",
+    url: "topup/spotify.html",
+  },
+  {
+    category: "apk",
+    img: "img/canva.png",
+    text: "Canva",
+    url: "topup/canva.html",
+  },
 ];
 
 const jokiMenu = [
-  { img: "img/change.png", text: "Mobile Legends", url: "topup/netflix.html" },
-  { img: "img/ff.png", text: "Free Fire", url: "topup/ff.html" },
-  { img: "img/genshin.png", text: "Genshin", url: "topup/genshin.html" },
+  {
+    category: "joki",
+    img: "img/change.png",
+    text: "Mobile Legends",
+    url: "topup/joki.html",
+  },
+  {
+    category: "joki",
+    img: "img/ff.png",
+    text: "Free Fire",
+    url: "topup/ff.html",
+  },
+  {
+    category: "joki",
+    img: "img/genshin.png",
+    text: "Genshin",
+    url: "topup/genshin.html",
+  },
 ];
 
 const defaultMenuHTML = menuContainer.innerHTML;
@@ -103,8 +152,9 @@ function changeMenu(menuData) {
     textKategori.classList.add("text-kategori");
     textKategori.innerText = item.text;
 
-    // img.style.margin = "6px";
-
+    if (item.category != "joki") {
+      img.style.margin = "6px";
+    }
     // Tambahkan event listener pada gambar
     img.addEventListener("click", () => {
       window.location.href = item.url; // Arahkan ke URL yang sesuai
@@ -140,3 +190,9 @@ topupBtn.addEventListener("click", (event) => {
   console.log("Topup button clicked");
   menuContainer.innerHTML = defaultMenuHTML;
 });
+
+// topup ewallet
+function toggleSection(sectionId) {
+  let section = document.getElementById(sectionId);
+  section.style.display = section.style.display === "block" ? "none" : "block";
+}

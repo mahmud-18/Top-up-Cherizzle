@@ -3,6 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- cdnjs -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- font and link -->
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -76,6 +87,7 @@
                 alt="pastel"
                 style="width: 30px; height: 30px"
               />
+              <i class="fa-solid fa-angle-down down-arrow"></i>
             </a>
 
             <div class="dropdown-jadwal">
@@ -105,11 +117,7 @@
         <div class="dropdown">
           <a href="#" class="dropbtn" onclick="myFunction(event)"
             >Login
-            <img
-              src="https://img.icons8.com/nolan/10/sort-down--v1.png"
-              alt="sort-down--v1"
-              class="down-arrow"
-            />
+            <i class="fa-solid fa-angle-down down-arrow"></i>
           </a>
           <div id="myDropdownLogin" class="dropdown-content">
             <a href="../../login/login.html" class="drop-text">Masuk</a>
@@ -124,20 +132,212 @@
     </header>
 
     <!-- Invoice Search -->
-    <section class="container-topup">
-      <div class="row">
-        <div class="img-banner">
-          <img src="" alt="" />
-        </div>
-        <div class="card-header tutorial"></div>
-        <div class="card-header testimoni"></div>
 
-        <div class="card-data"></div>
-        <div class="pricelist"></div>
-        <div class="payment"></div>
-        <div class="contact-form">
-          <!-- <label><input type="number" placeholder="081234xxxx" /></label>
-          <label><input type="mail" placeholder="Your Email" /></label> -->
+    <section class="container-topup">
+      <div class="container">
+        <div class="left-panel">
+          <div class="image-container banner">
+            <img
+              alt="A colorful anime character sitting on a large fruit slice with a dreamy background"
+              height="200"
+              src="assets/change.jpeg"
+              width="400"
+            />
+          </div>
+          <div class="image-container tutorial">
+            <h1>Mobile Legends</h1>
+            <!-- tergantung game nya -->
+            <span class="verified">
+              <i class="fa-regular fa-circle-check"></i> Verified
+            </span>
+
+            <div class="tutorial-order">
+              <h2>Cara Order Mobile Legends :</h2>
+              <ul class="tips">
+                <li>- Masukan Id & Server</li>
+                <li>- Pilih Pricelist yang kamu mau</li>
+                <li>- Pilih Pembayaran</li>
+                <li>- Masukan email dan no whatsapp untuk mendapatkan bukti</li>
+                <li>- Pencet order now dan pembayaran selesai</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="image-container testimoni">
+            <h1>Testimoni</h1>
+          </div>
+        </div>
+        <div class="right-panel">
+          <div class="input-group">
+            <h1>Lengkapi Data</h1>
+            <div class="input-row">
+              <div>
+                <label for="id"> ID </label>
+                <input id="id" type="text" />
+              </div>
+              <div>
+                <label for="server"> Server </label>
+                <input id="server" type="text" />
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <h1>Pilih Nominal</h1>
+
+            <div class="card-container">
+              <div class="card">
+                <img
+                  alt="Placeholder image for Top Up"
+                  src="assets/topup.jpeg"
+                />
+                <a href="">Top Up</a>
+              </div>
+              <div class="card">
+                <img
+                  alt="Placeholder image for Top Up"
+                  src="assets/Weekly.png"
+                />
+                <a href="">Weekly</a>
+              </div>
+              <div class="card">
+                <img
+                  alt="Placeholder image for Top Up"
+                  src="assets/Membership .jpeg"
+                />
+                <a href="">Membership</a>
+              </div>
+              <div class="card">
+                <img
+                  alt="Placeholder image for Top Up"
+                  src="assets/gplay.png "
+                />
+                <a href="">Google Play</a>
+              </div>
+              <div class="card">
+                <img
+                  alt="Placeholder image for Top Up"
+                  src="assets/topup.jpeg"
+                />
+                <a href="">Server Luar</a>
+              </div>
+              <div class="card">
+                <img
+                  alt="Placeholder image for Top Up"
+                  src="assets/topup.jpeg"
+                />
+                <a href="">Server Brazil</a>
+              </div>
+            </div>
+
+            <div class="pricelist-menu">
+              <div class="pricelist-content">
+                <h2>Mobile Legend - 86 Diamonds</h2>
+                <p>Rp. 20.200</p>
+              </div>
+
+              <div class="pricelist-content">
+                <h2>Mobile Legend - 86 Diamonds</h2>
+                <p>Rp. 20.200</p>
+              </div>
+
+              <div class="pricelist-content">
+                <h2>Mobile Legend - 86 Diamonds</h2>
+                <p>Rp. 20.200</p>
+              </div>
+
+              <div class="pricelist-content">
+                <h2>Mobile Legend - 86 Diamonds</h2>
+                <p>Rp. 20.200</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <h1>Pilih Pembayaran</h1>
+
+            <div class="accordion">
+              <div class="accordion-item">
+                <button
+                  class="accordion-button"
+                  onclick="toggleSection('ewallet')"
+                >
+                  E-Wallet
+                  <i class="fa-solid fa-angle-down arrow-accordion"></i>
+                </button>
+                <div id="ewallet" class="accordion-content">
+                  <img
+                    src="assets/payment/gopay.jpeg"
+                    alt="Gopay"
+                    style="width: 50px"
+                  />
+                  <img
+                    src="assets/payment/ovo.jpeg"
+                    alt="OVO"
+                    style="width: 50px"
+                  />
+                  <img
+                    src="assets/payment/spay.png"
+                    alt="Shoppe pay"
+                    style="width: 50px"
+                  />
+                  <img
+                    src="assets/payment/dana.jpeg"
+                    alt="Dana"
+                    style="width: 50px"
+                  />
+                </div>
+              </div>
+
+              <!-- Virtual Account Section -->
+              <div class="accordion-item">
+                <button
+                  class="accordion-button"
+                  onclick="toggleSection('virtualAccount')"
+                >
+                  Virtual Account
+                  <i class="fa-solid fa-angle-down arrow-accordion"></i>
+                </button>
+                <div id="virtualAccount" class="accordion-content">
+                  <img
+                    src="assets/payment/bri.jpeg"
+                    alt="BRI"
+                    style="width: 50px"
+                  />
+
+                  <img
+                    src="assets/payment/jago.png"
+                    alt="Jago"
+                    style="width: 50px"
+                  />
+
+                  <img
+                    src="assets/payment/seabank.png"
+                    alt="Seabank"
+                    style="width: 50px"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <h1>Bukti Pembelian</h1>
+            <div class="form-w">
+              <label> No Whatsapp </label>
+              <input type="tel" name="number" placeholder="081234xxxx" />
+            </div>
+
+            <div class="form-w">
+              <label> Email </label>
+              <input type="text" name="email" placeholder="Your Email" />
+            </div>
+          </div>
+
+          <button class="order-button">
+            Order Now
+            <i class="fa-solid fa-cart-shopping shopping-icon"></i>
+          </button>
         </div>
       </div>
     </section>
@@ -280,6 +480,6 @@
     <!-- Feather Icons -->
 
     <!-- Js -->
-    <script src="../../js/script.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>
