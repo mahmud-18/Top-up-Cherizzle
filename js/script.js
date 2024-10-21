@@ -192,7 +192,3 @@ topupBtn.addEventListener("click", (event) => {
 });
 
 // topup ewallet
-function toggleSection(sectionId) {
-  let section = document.getElementById(sectionId);
-  section.style.display = section.style.display === "block" ? "none" : "block";
-}

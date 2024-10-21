@@ -426,11 +426,11 @@ footer .credit a {
     background-color: rgba(113, 203, 255, 0.95);
     width: 60%;
     padding-left: 10px;
+
     z-index: 10;
   }
 
   .navbar-nav a {
-    text-align: left;
     width: 100%;
   }
 
@@ -467,18 +467,15 @@ footer .credit a {
   }
 
   .btn-jadwal {
-    margin-right: 4rem;
-    width: 100%;
-  }
+    width: 55vw !important;
 
-  .btn-jadwal {
-    width: 100%;
+    text-align: left;
   }
 
   .dropdown-jadwal {
-    width: 60vw;
-    top: 2.8rem;
-    right: -0.5rem;
+    width: 59.4vw;
+    right: -8px;
+    top: 3rem;
   }
 
   /* Search */
